@@ -31,9 +31,13 @@ fig2 = px.bar(df, x='Hospital_Name', y=['Medicaid_Revenue_Loss_M', 'Projected_Re
 st.plotly_chart(fig2, use_container_width=True)
 
 # Legislative Report Builder
-st.markdown("
 
-st.markdown("### 🔎 Browse & Download Scored Data")
+st.markdown("""
+### 🔎 Browse & Download Scored Data
+
+Use the table below to explore all hospital scores. Click below to export the full dataset.
+""")
+
 st.dataframe(df)
 
 st.download_button(
@@ -42,6 +46,7 @@ st.download_button(
     file_name="Hospital_Crisis_Metrics_Scored.csv",
     mime="text/csv"
 )
+
 
 
 ### 🏛️ One-Click Legislative Report Builder")
